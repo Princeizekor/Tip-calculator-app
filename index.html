@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <title>Tip calculator app</title>
+</head>
+<body>
+     <button class="img"><img src="./images/logo.svg" alt="logo image"></button>
+     
+  <main id="main">
+    <div class="set">
+      <div class="add">
+        <p class="bill"> Bill</p>
+        <div class="input">
+          <img src="./images/icon-dollar.svg" alt="dollar image">
+          <input type="number" name="text" id="text" placeholder="0">
+        </div>
+       <div class="erdiv">
+        <p class="error">Can't be zero</p>
+       </div>
+
+        <p class="tip">Select Tip </p>
+
+        <div class="select">
+          <button class="btn">5</button>
+          <button class="btn">10</button>
+          <button class="btn">15</button>
+          <button class="btn">25</button>
+          <button class="btn">50</button>
+          <input type="number" name="custom" id="custom" placeholder="Custom">
+        </div>
+
+        <div class="erdiv1">
+          <p class="num">Number of People</p>
+          <p class="error1">Can't be zero</p>
+         </div>
+        <div class="input1">
+          <img src="./images/icon-person.svg" alt="dollar image">
+          <input type="number" name="text" id="text1" placeholder="0">
+        </div>
+      </div>
+    </div>
+
+    <div class="result">
+      <div class="in">
+          <div class="amount">
+             <div class="read">
+              <p class="amt">
+                Tip Amount
+              </p>
+              <p class="person">
+                / person
+              </p>
+             </div>
+             <div class="disp1">
+               $0.00
+             </div>
+          </div>
+
+          <div class="amount1">
+            <div class="read1">
+             <p class="amt1">
+               Total
+             </p>
+             <p class="person1">
+               / person
+             </p>
+            </div>
+            <div class="disp2">
+              $0.00
+            </div>
+         </div>
+
+         <button class="reset">RESET</button>
+      </div>
+    </div>
+  </main>
+ 
+  
+<script src="./main.js"></script>
+</body>
+</html>
