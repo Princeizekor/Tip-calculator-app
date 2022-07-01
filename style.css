@@ -368,7 +368,7 @@ body {
     }
 
     #main {
-        width: 100%;
+        width: 360px;
         height: 710px;
         display: flex;
         flex-direction: column;
@@ -421,35 +421,6 @@ body {
     .result {
         height: 300px;
         width: 100%;
-    }
-    .amount {
-        width: 90%;
-        height: 50px;
-    }
-    
-    .read {
-        width: 90%;
-        height: 90%;
-    }
-    
-    .disp1 {
-        width: 90%;
-        height: 90%;
-    }
-    
-    .amount1 {
-        width: 90%;
-        height: 50px;
-    }
-    
-    .read1 {
-        width: 90%;
-        height: 90%;
-    }
-
-    .disp2 {
-        width: 90%;
-        height: 90%;
     }
     
     .reset {
