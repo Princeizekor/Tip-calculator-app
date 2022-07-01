@@ -1,4 +1,5 @@
 const button = Array.from(document.getElementsByClassName("btn"))
+const tho = Array.from(document.getElementsByClassName("add"))
 const text = document.getElementById("text")
 const input = document.querySelector(".input")
 const check = document.querySelector(".error")
@@ -10,6 +11,7 @@ const disps = document.querySelector(".disp2")
 const custom = document.getElementById("custom")
 const reset = document.querySelector(".reset")
 let doller = "$"
+let percent = "%"
 
 button.map(btn => {
     btn.addEventListener('click', () => {
@@ -17,24 +19,26 @@ button.map(btn => {
       Button()
       Reset()
       button.map(btn => btn.classList.remove("light"))
-        if (text.value == "") {
-            disp.innerText =  disp.innerText
-            disp.innerText = "$0.00"
-            disps.innerText = "$0.00"
-            button.map(btn => btn.classList.remove("light"))
-        } else {
-            disp.innerText = `${doller}${eval(btn.innerText / 100 * text.value / Texts.value).toFixed(2)}`
-            btn.classList.add("light")
-        }
-        if (Texts.value == "") {
-            disps.innerText = disps.innerText
-            disp.innerText = "$0.00"
-            disps.innerText = "$0.00"
-            button.map(btn => btn.classList.remove("light"))
-        } else {
-            disps.innerText = `${doller}${eval(btn.innerText / 100 * text.value / Texts.value + text.value / Texts.value).toFixed(2)}`
-            btn.classList.add("light")
-        }
+tho.map(refill => {
+    if (text.value == "") {
+        disp.innerText =  disp.innerText
+        disp.innerText = "$0.00"
+        disps.innerText = "$0.00"
+        button.map(btn => btn.classList.remove("light"))
+    } else {
+        disp.innerText = `${doller}${eval(refill.innerText / 100 * text.value / Texts.value).toFixed(2)}`
+        btn.classList.add("light")
+    }
+    if (Texts.value == "") {
+        disps.innerText = disps.innerText
+        disp.innerText = "$0.00"
+        disps.innerText = "$0.00"
+        button.map(btn => btn.classList.remove("light"))
+    } else {
+        disps.innerText = `${doller}${eval(refill.innerText / 100 * text.value / Texts.value + text.value / Texts.value).toFixed(2)}`
+        btn.classList.add("light")
+    }
+})
     })
 })
 
