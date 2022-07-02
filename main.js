@@ -1,5 +1,4 @@
 const button = Array.from(document.getElementsByClassName("btn"))
-const tho = Array.from(document.getElementsByClassName("add"))
 const text = document.getElementById("text")
 const input = document.querySelector(".input")
 const check = document.querySelector(".error")
@@ -19,14 +18,13 @@ button.map(btn => {
       Button()
       Reset()
       button.map(btn => btn.classList.remove("light"))
-tho.map(refill => {
     if (text.value == "") {
         disp.innerText =  disp.innerText
         disp.innerText = "$0.00"
         disps.innerText = "$0.00"
         button.map(btn => btn.classList.remove("light"))
     } else {
-        disp.innerText = `${doller}${eval(refill.innerText / 100 * text.value / Texts.value).toFixed(2)}`
+        disp.innerText = `${doller}${eval(btn.innerText / 100 * text.value / Texts.value).toFixed(2)}`
         btn.classList.add("light")
     }
     if (Texts.value == "") {
@@ -35,11 +33,10 @@ tho.map(refill => {
         disps.innerText = "$0.00"
         button.map(btn => btn.classList.remove("light"))
     } else {
-        disps.innerText = `${doller}${eval(refill.innerText / 100 * text.value / Texts.value + text.value / Texts.value).toFixed(2)}`
+        disps.innerText = `${doller}${eval(btn.innerText / 100 * text.value / Texts.value + text.value / Texts.value).toFixed(2)}`
         btn.classList.add("light")
     }
 })
-    })
 })
 
 function buttoN() {
@@ -73,9 +70,13 @@ custom.addEventListener("click", () => {
 })
 
 custom.addEventListener("input", () => {
+    if (text.value == "" || Texts.value == "") {
+        disp.innerText = "$0.00"
+    } else {
     disp.innerText = `${doller}${eval(custom.value / 100 * text.value / Texts.value).toFixed(2)}`
     disps.innerText = `${doller}${eval(custom.value / 100 * text.value / Texts.value + text.value / Texts.value).toFixed(2)} `
     Reset()
+    }
 })
  
 function Reset() {
