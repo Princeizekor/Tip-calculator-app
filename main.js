@@ -51,6 +51,16 @@ function buttoN() {
     }
 }
 
+text.addEventListener("input", () => {
+    if (text.value == "") {
+        input.classList.add("none")
+        check.classList.add("disp")
+    } else {
+        input.classList.remove("none")
+        check.classList.remove("disp")
+    }
+})
+
 function Button() {
     if (Texts.value == "") {
         Input.classList.add("none")
@@ -62,6 +72,16 @@ function Button() {
         reset.classList.add("replay")
     }
 }
+
+Texts.addEventListener("input", () => {
+    if (Texts.value == "") {
+        Input.classList.add("none")
+        Check.classList.add("disp")
+    } else {
+        Input.classList.remove("none")
+        Check.classList.remove("disp")
+    }
+})
 
 custom.addEventListener("click", () => {
          buttoN()
